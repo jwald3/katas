@@ -2,21 +2,23 @@
 #include <vector>
 #include <map>
 
-std::vector<int> twosum(std::vector<int> array, int goal)
+std::vector<int> twosum(std::vector<int> numbers, int target)
 {
     // define map
-    std::map<int, int> numbers {};
-    int length { static_cast<int>(array.size())};
+    std::map<int, int> numMap {};
+    int length { static_cast<int>(numbers.size())};
 
     // loop 1
-    for (int i {0}; i < length; ++i)
-        numbers[array[i]] = i;
+    for (int i {0}; i < length; i++)
+        numMap[numbers[i]] = i;
 
     // loop 2
-    for (int j {0}; j < length; ++j)
+    for (int j {0}; j < length; j++)
     {
-        if (numbers.count(numbers[goal - array[j]]))
-            return { j, numbers[goal - array[j]] };
+        int complement = target - numbers[j];
+
+        if (numMap.count(complement) && numMap[complement] != j)
+            return { j, numMap[complement] };
     }
 
     return {};
@@ -25,8 +27,7 @@ std::vector<int> twosum(std::vector<int> array, int goal)
 
 int main()
 {
-    std::vector<int> grades {12, 18, 15, 13, 9, 1, 8, 13, 5};
-    std::vector<int> match { twosum(grades, 19) };
+    std::vector<int> match { twosum({1234, 5678, 9012}, 14690) };
 
     if (match.size() == 2)
     {
