@@ -2,7 +2,7 @@
 #include <vector>
 #include <map>
 
-bool twosum(std::vector<int> array, int goal)
+std::vector<int> twosum(std::vector<int> array, int goal)
 {
     // define map
     std::map<int, int> numbers {};
@@ -16,21 +16,21 @@ bool twosum(std::vector<int> array, int goal)
     for (int j {0}; j < length; ++j)
     {
         if (numbers.count(numbers[goal - array[j]]))
-            return true;
+            return { j, numbers[goal - array[j]] };
     }
 
-    return false;
+    return {};
 }
 
 
 int main()
 {
     std::vector<int> grades {12, 18, 15, 13, 9, 1, 8, 13, 5};
-    bool match { twosum(grades, 19) };
+    std::vector<int> match { twosum(grades, 19) };
 
-    if (match)
+    if (match.size() == 2)
     {
-        std::cout << "a match was found\n";
+        std::cout << "The indices are " << match[0] << " and " << match[1] << '\n';
     }
     else
     {
