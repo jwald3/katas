@@ -1,22 +1,36 @@
 #include <iostream>
 #include <vector>
 
-int main()
+bool twosum(std::vector<int> array)
 {
-    std::vector<int> grades {12, 18, 1, 13, 9, 8, 13, 5};
-    std::size_t length { grades.size() };
+    std::size_t length { array.size() };
 
     for (int i {0}; i < static_cast<int>(length); ++i) 
     {
         for (int j {0}; j < static_cast<int>(length); ++j) 
-            if (grades[i] + grades[j] == 19)
+            if (array[i] + array[j] == 19)
             {
-                std::cout << grades[i] << " + " << grades[j] << " equal 19\n";
-                return 0;
+                return true;
             }
     }
 
-    std::cout << "no pairs add up to 19\n";
+    return false;
+}
+
+
+int main()
+{
+    std::vector<int> grades {12, 18, 15, 13, 9, 8, 13, 5};
+    bool match { twosum(grades) };
+
+    if (match)
+    {
+        std::cout << "a match was found\n";
+    }
+    else
+    {
+        std::cout << "no match was found\n";
+    }
 
     return 0;
 }
