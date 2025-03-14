@@ -1,17 +1,22 @@
 #include <iostream>
 #include <vector>
+#include <map>
 
-bool twosum(std::vector<int> array)
+bool twosum(std::vector<int> array, int goal)
 {
-    std::size_t length { array.size() };
+    // define map
+    std::map<int, int> numbers {};
+    int length { static_cast<int>(array.size())};
 
-    for (int i {0}; i < static_cast<int>(length); ++i) 
+    // loop 1
+    for (int i {0}; i < length; ++i)
+        numbers[array[i]] = i;
+
+    // loop 2
+    for (int j {0}; j < length; ++j)
     {
-        for (int j {0}; j < static_cast<int>(length); ++j) 
-            if (array[i] + array[j] == 19)
-            {
-                return true;
-            }
+        if (numbers.count(numbers[goal - array[j]]))
+            return true;
     }
 
     return false;
@@ -20,8 +25,8 @@ bool twosum(std::vector<int> array)
 
 int main()
 {
-    std::vector<int> grades {12, 18, 15, 13, 9, 8, 13, 5};
-    bool match { twosum(grades) };
+    std::vector<int> grades {12, 18, 15, 13, 9, 1, 8, 13, 5};
+    bool match { twosum(grades, 19) };
 
     if (match)
     {
