@@ -1,29 +1,31 @@
 #include <string>
 #include <iostream>
 
-std::string createPhoneNumber(const int arr [10]){
-  std::string areaCode = "";
-  std::string exchangeCode = "";
-  std::string line = "";
-  
-  
-  for (int i { 0 }; i < 10; ++i) {
-    if (i < 3) {
-      areaCode += ('0' + arr[i]);
-    } else if (i < 6) {
-      exchangeCode += ('0' + arr[i]);
-    } else {
-      line += ('0' + arr[i]);
+std::string createPhoneNumber(const int arr[10])
+{
+    // a template built with a single, consistent value to replace
+    std::string temp = "(xxx) xxx-xxxx";
+
+    // the pointer to the array index (rather than the template index)
+    // need this for ensuring each "x" gets replaced
+    int i = 0;
+
+    // don't need a int i = 0... loop because index is unimportant here
+    for (auto &x : temp)
+    {
+        if (x == 'x')
+        {
+            x = arr[i++] + '0';
+        }
     }
-  }
-  
-  
-  return "(" + areaCode + ") " + exchangeCode + "-" + line;
+
+    return temp;
 }
 
-int main() {
-    using arr = int [10];
-    
+int main()
+{
+    using arr = int[10];
+
     std::string number = createPhoneNumber(arr{1, 2, 3, 4, 5, 6, 7, 8, 9, 0});
 
     std::cout << "number: " << number << '\n';
