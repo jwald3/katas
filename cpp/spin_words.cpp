@@ -6,8 +6,6 @@
 std::string spinWords(const std::string &str) {
     std::vector<std::string> words {};
 
-    std::cout << "Size is " << str.size() << '\n';
-
     for (size_t i {0}; i < str.size();) {
         std::string word = "";
 
