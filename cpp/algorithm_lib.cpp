@@ -58,7 +58,21 @@ int sum(const std::vector<int>& v) {
 // bool containsSubsequence(const std::vector<int>& haystack,
 //                          const std::vector<int>& needle);
 // std::pair<int,int> minMax(const std::vector<int>& v);
-// std::vector<std::string> toUpperCase(const std::vector<std::string>& v);
+std::vector<std::string> toUpperCase(const std::vector<std::string>& v) {
+    std::vector<std::string> capitalized {};
+
+    for (auto s: v) {
+        std::transform(s.begin(), s.end(), s.begin(), 
+        [](char c) {
+            return std::toupper(c);
+        });
+
+        capitalized.push_back(s);
+    }
+
+    return capitalized;
+}
+
 // std::vector<int> rotateLeft(std::vector<int> v, int n);
 // bool isSortedAsc(const std::vector<int>& v);
 // std::vector<int> iotaSequence(int start, int n);

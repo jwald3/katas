@@ -30,8 +30,8 @@ int main() {
     // assert(mm2.first == 5 && mm2.second == 5);
 
     // // 7. Uppercase
-    // assert((toUpperCase({"abc","XyZ"})
-    //         == std::vector<std::string>({"ABC","XYZ"})));
+    assert((toUpperCase({"abc","XyZ"})
+            == std::vector<std::string>({"ABC","XYZ"})));
 
     // // 8. Rotate left
     // assert((rotateLeft({1,2,3,4,5}, 2)
