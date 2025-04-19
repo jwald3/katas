@@ -26,7 +26,7 @@ std::size_t duplicateCount(const std::string& in) {
 int main() {
     assert(duplicateCount("asdfghjkl54") == 0 && "No duplicates in \"asdfghjkl54\"");
     assert(duplicateCount("abcdeaa") == 1 && "One duplicate in \"abcdeaa\"");
-    assert(duplicateCount("abcdeaB") == 2 && "One duplicate in \"abcdeaB\"");
+    assert(duplicateCount("abcdeaB") == 2 && "Two duplicates in \"abcdeaB\"");
 
     return 0;
 }
