@@ -58,9 +58,9 @@ int main() {
     // assert(!binarySearch({}, 1));
 
     // // 13. Count vowels
-    // assert(countVowels("hello") == 2);
-    // assert(countVowels("rhythm") == 0);
-    // assert(countVowels("AEIOUaeiou") == 10);
+    assert(countVowels("hello") == 2);
+    assert(countVowels("rhythm") == 0);
+    assert(countVowels("AEIOUaeiou") == 10);
 
     return 0;
 }

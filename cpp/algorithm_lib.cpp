@@ -6,6 +6,7 @@
 #include <algorithm>
 #include "algorithm_lib.h"
 #include <numeric>
+#include <regex>
 
 std::string to_lower(const std::string& s) {
     std::string tempString = s;
@@ -79,4 +80,15 @@ std::vector<std::string> toUpperCase(const std::vector<std::string>& v) {
 // std::pair<std::vector<int>,std::vector<int>>
 //   partitionOddsEvens(const std::vector<int>& v);
 // bool binarySearch(const std::vector<int>& v, int value);
-// int countVowels(const std::string& s);
+
+int countVowels(const std::string& s) {
+    // need to make "re" accessible across all lambda calls and all `countVowels` calls
+    static const std::regex re("[aeiouAEIOU]");
+
+    return std::count_if(s.begin(), s.end(), [&](char c) {
+        return std::regex_match(
+            std::string(1, c), // need to set a string size, cannot use c directly
+            re
+        );
+    });
+}
