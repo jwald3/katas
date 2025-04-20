@@ -89,7 +89,12 @@ bool isSortedAsc(const std::vector<int>& v) {
     return std::is_sorted(v.begin(), v.end());
 }
 
-// std::vector<int> iotaSequence(int start, int n)
+std::vector<int> iotaSequence(int start, int n) {
+    std::vector<int> v;
+    std::iota(v.begin(), v.end(), n);
+
+    return v;
+}
 
 // std::pair<std::vector<int>,std::vector<int>>
 //   partitionOddsEvens(const std::vector<int>& v)

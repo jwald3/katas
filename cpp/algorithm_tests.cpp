@@ -44,8 +44,8 @@ int main() {
     assert(isSortedAsc({}));
 
     // // 10. Iota sequence
-    // assert((iotaSequence(5, 3) == std::vector<int>({5,6,7})));
-    // assert((iotaSequence(0, 0) == std::vector<int>({})));
+    assert((iotaSequence(5, 3) == std::vector<int>({5,6,7})));
+    assert((iotaSequence(0, 0) == std::vector<int>({})));
 
     // // 11. Partition odds/evens
     // auto pe = partitionOddsEvens({1,2,3,4,5});
