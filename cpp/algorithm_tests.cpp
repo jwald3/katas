@@ -39,9 +39,9 @@ int main() {
     assert((rotateLeft({}, 3) == std::vector<int>({})));
 
     // // 9. Sorted check
-    // assert(isSortedAsc({1,2,2,3}));
-    // assert(!isSortedAsc({1,3,2}));
-    // assert(isSortedAsc({}));
+    assert(isSortedAsc({1,2,2,3}));
+    assert(!isSortedAsc({1,3,2}));
+    assert(isSortedAsc({}));
 
     // // 10. Iota sequence
     // assert((iotaSequence(5, 3) == std::vector<int>({5,6,7})));

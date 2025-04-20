@@ -11,7 +11,7 @@ int sum(const std::vector<int>& v);
 std::pair<int,int> minMax(const std::vector<int>& v);
 std::vector<std::string> toUpperCase(const std::vector<std::string>& v);
 std::vector<int> rotateLeft(std::vector<int> v, int n);
-// bool isSortedAsc(const std::vector<int>& v);
+bool isSortedAsc(const std::vector<int>& v);
 // std::vector<int> iotaSequence(int start, int n);
 // std::pair<std::vector<int>,std::vector<int>>
 //   partitionOddsEvens(const std::vector<int>& v);

@@ -85,11 +85,17 @@ std::vector<int> rotateLeft(std::vector<int> v, int n) {
 }
 
 
-// bool isSortedAsc(const std::vector<int>& v);
-// std::vector<int> iotaSequence(int start, int n);
+bool isSortedAsc(const std::vector<int>& v) {
+    return std::is_sorted(v.begin(), v.end());
+}
+
+// std::vector<int> iotaSequence(int start, int n)
+
 // std::pair<std::vector<int>,std::vector<int>>
-//   partitionOddsEvens(const std::vector<int>& v);
-// bool binarySearch(const std::vector<int>& v, int value);
+//   partitionOddsEvens(const std::vector<int>& v)
+
+// bool binarySearch(const std::vector<int>& v, int value)
+
 
 int countVowels(const std::string& s) {
     // need to make "re" accessible across all lambda calls and all `countVowels` calls
