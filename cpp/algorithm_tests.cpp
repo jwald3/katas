@@ -24,10 +24,10 @@ int main() {
     // assert(!containsSubsequence({1,2,3}, {3,2}));
 
     // // 6. Min and Max
-    // auto mm1 = minMax({3,1,4,2});
-    // assert(mm1.first == 1 && mm1.second == 4);
-    // auto mm2 = minMax({5});
-    // assert(mm2.first == 5 && mm2.second == 5);
+    auto mm1 = minMax({3,1,4,2});
+    assert(mm1.first == 1 && mm1.second == 4);
+    auto mm2 = minMax({5});
+    assert(mm2.first == 5 && mm2.second == 5);
 
     // // 7. Uppercase
     assert((toUpperCase({"abc","XyZ"})

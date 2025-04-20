@@ -58,7 +58,12 @@ int sum(const std::vector<int>& v) {
 
 // bool containsSubsequence(const std::vector<int>& haystack,
 //                          const std::vector<int>& needle);
-// std::pair<int,int> minMax(const std::vector<int>& v);
+
+std::pair<int,int> minMax(const std::vector<int>& v) {
+    auto values = std::minmax_element(v.begin(), v.end());
+    return std::pair<int, int>(*values.first, *values.second);
+}
+
 std::vector<std::string> toUpperCase(const std::vector<std::string>& v) {
     std::vector<std::string> capitalized {};
 

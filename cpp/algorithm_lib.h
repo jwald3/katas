@@ -8,7 +8,7 @@ std::vector<int> filterEven(const std::vector<int>& v);
 int sum(const std::vector<int>& v);
 // bool containsSubsequence(const std::vector<int>& haystack,
 //                          const std::vector<int>& needle);
-// std::pair<int,int> minMax(const std::vector<int>& v);
+std::pair<int,int> minMax(const std::vector<int>& v);
 std::vector<std::string> toUpperCase(const std::vector<std::string>& v);
 // std::vector<int> rotateLeft(std::vector<int> v, int n);
 // bool isSortedAsc(const std::vector<int>& v);
