@@ -34,9 +34,9 @@ int main() {
             == std::vector<std::string>({"ABC","XYZ"})));
 
     // // 8. Rotate left
-    // assert((rotateLeft({1,2,3,4,5}, 2)
-    //         == std::vector<int>({3,4,5,1,2})));
-    // assert((rotateLeft({}, 3) == std::vector<int>({})));
+    assert((rotateLeft({1,2,3,4,5}, 2)
+            == std::vector<int>({3,4,5,1,2})));
+    assert((rotateLeft({}, 3) == std::vector<int>({})));
 
     // // 9. Sorted check
     // assert(isSortedAsc({1,2,2,3}));

@@ -79,7 +79,12 @@ std::vector<std::string> toUpperCase(const std::vector<std::string>& v) {
     return capitalized;
 }
 
-// std::vector<int> rotateLeft(std::vector<int> v, int n);
+std::vector<int> rotateLeft(std::vector<int> v, int n) {
+    std::rotate(v.begin(), v.begin() + n, v.end());
+    return std::vector<int>(v.begin(), v.end());
+}
+
+
 // bool isSortedAsc(const std::vector<int>& v);
 // std::vector<int> iotaSequence(int start, int n);
 // std::pair<std::vector<int>,std::vector<int>>
