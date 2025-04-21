@@ -37,6 +37,7 @@ int main() {
     assert((rotateLeft({1,2,3,4,5}, 2)
             == std::vector<int>({3,4,5,1,2})));
     assert((rotateLeft({}, 3) == std::vector<int>({})));
+    // assert((rotateLeft({1,2,3,4,5}, 15) == std::vector<int>({1, 2, 3, 4, 5})));
 
     // // 9. Sorted check
     assert(isSortedAsc({1,2,2,3}));

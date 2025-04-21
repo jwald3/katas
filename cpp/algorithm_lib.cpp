@@ -76,8 +76,10 @@ std::vector<std::string> toUpperCase(const std::vector<std::string>& v) {
 }
 
 std::vector<int> rotateLeft(std::vector<int> v, int n) {
+    if (v.empty()) return v;
+    n %= static_cast<int>(v.size());  // crop the number or rotations to be 0 <= n < len(v)
     std::rotate(v.begin(), v.begin() + n, v.end());
-    return std::vector<int>(v.begin(), v.end());
+    return v;
 }
 
 bool isSortedAsc(const std::vector<int>& v) {
@@ -85,20 +87,20 @@ bool isSortedAsc(const std::vector<int>& v) {
 }
 
 std::vector<int> iotaSequence(int start, int n) {
-    std::vector<int> v;
-    std::iota(v.begin(), v.end(), n);
+    std::vector<int> v(n);
+    std::iota(v.begin(), v.end(), start);
 
     return v;
 }
 
 std::pair<std::vector<int>, std::vector<int>> partitionOddsEvens(const std::vector<int>& v) {
-    std::vector<int> odds{};
-    std::vector<int> evens{};
+    std::vector<int> odds{}, evens{};
 
-    std::partition_copy(std::begin(evens), std::end(evens),
-                        std::begin(odds), std::end(odds),
+    std::partition_copy(v.begin(), v.end(),
+                        std::back_inserter(odds),
+                        std::back_inserter(evens),
                     [](int i) { 
-                        return i % 2 == 0; 
+                        return i % 2 != 0; 
                     });
 
     return std::pair<std::vector<int>, std::vector<int>>(odds, evens);
