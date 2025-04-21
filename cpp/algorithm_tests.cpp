@@ -48,9 +48,9 @@ int main() {
     assert((iotaSequence(0, 0) == std::vector<int>({})));
 
     // // 11. Partition odds/evens
-    // auto pe = partitionOddsEvens({1,2,3,4,5});
-    // assert(pe.first  == std::vector<int>({1,3,5}));
-    // assert(pe.second == std::vector<int>({2,4}));
+    auto pe = partitionOddsEvens({1,2,3,4,5});
+    assert(pe.first  == std::vector<int>({1,3,5}));
+    assert(pe.second == std::vector<int>({2,4}));
 
     // // 12. Binary search
     // assert(binarySearch({1,2,3,4}, 3));
