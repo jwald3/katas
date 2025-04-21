@@ -53,8 +53,9 @@ int sum(const std::vector<int>& v) {
     return n;
 }
 
-// bool containsSubsequence(const std::vector<int>& haystack,
-//                          const std::vector<int>& needle);
+bool containsSubsequence(const std::vector<int>& haystack, const std::vector<int>& needle) {
+    return std::search(haystack.begin(), haystack.end(), needle.begin(), needle.end()) != haystack.end();
+}
 
 std::pair<int, int> minMax(const std::vector<int>& v) {
     auto values = std::minmax_element(v.begin(), v.end());
@@ -103,7 +104,9 @@ std::pair<std::vector<int>, std::vector<int>> partitionOddsEvens(const std::vect
     return std::pair<std::vector<int>, std::vector<int>>(odds, evens);
 }
 
-// bool binarySearch(const std::vector<int>& v, int value)
+bool binarySearch(const std::vector<int>& v, int value) {
+    return std::binary_search(v.begin(), v.end(), value);
+}
 
 int countVowels(const std::string& s) {
     // need to make "re" accessible across all lambda calls and all

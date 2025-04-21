@@ -20,8 +20,8 @@ int main() {
     assert(sum({}) == 0);
 
     // // 5. Subsequence
-    // assert(containsSubsequence({1,2,3,4,5}, {2,3,4}));
-    // assert(!containsSubsequence({1,2,3}, {3,2}));
+    assert(containsSubsequence({1,2,3,4,5}, {2,3,4}));
+    assert(!containsSubsequence({1,2,3}, {3,2}));
 
     // // 6. Min and Max
     auto mm1 = minMax({3,1,4,2});
@@ -53,9 +53,9 @@ int main() {
     assert(pe.second == std::vector<int>({2,4}));
 
     // // 12. Binary search
-    // assert(binarySearch({1,2,3,4}, 3));
-    // assert(!binarySearch({1,2,3,4}, 5));
-    // assert(!binarySearch({}, 1));
+    assert(binarySearch({1,2,3,4}, 3));
+    assert(!binarySearch({1,2,3,4}, 5));
+    assert(!binarySearch({}, 1));
 
     // // 13. Count vowels
     assert(countVowels("hello") == 2);
