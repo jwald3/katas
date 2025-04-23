@@ -128,7 +128,18 @@ int countVowels(const std::string& s) {
 }
 
 // std::vector<int> zipSum(const std::vector<int>& a, const std::vector<int>& b);
-// std::vector<int> clampValues(std::vector<int> v, int low, int high);
+
+std::vector<int> clampValues(std::vector<int> v, int low, int high) {
+    // you have to make sure the destination container is properly sized before writing to it
+    std::vector<int> v2(v.size());
+    
+    std::transform(v.begin(), v.end(), v2.begin(), [&](int a) {
+        return std::clamp(a, low, high);
+    });
+
+    return v2;
+}
+
 // char firstDuplicateChar(const std::string& s);
 // std::string concatenate(const std::vector<std::string>& v,
 //                         const std::string& sep);

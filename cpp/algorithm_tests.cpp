@@ -68,8 +68,8 @@ int main() {
     // assert((zipSum({}, {}) == std::vector<int>({})));
 
     // // 2. clampValues
-    // assert((clampValues({-5,0,5,10,15}, 0, 10)
-    //         == std::vector<int>({0,0,5,10,10})));
+    assert((clampValues({-5,0,5,10,15}, 0, 10)
+            == std::vector<int>({0,0,5,10,10})));
 
     // // 3. firstDuplicateChar
     // assert(firstDuplicateChar("abcdefaA") == 'a');
