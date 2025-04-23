@@ -97,8 +97,8 @@ std::pair<std::vector<int>, std::vector<int>> partitionOddsEvens(const std::vect
     std::vector<int> odds{}, evens{};
 
     std::partition_copy(v.begin(), v.end(),
-                        std::back_inserter(odds),
-                        std::back_inserter(evens),
+                        std::back_inserter(odds),   // first is the "true" case
+                        std::back_inserter(evens),  // second is what fails to be true
                     [](int i) { 
                         return i % 2 != 0; 
                     });
