@@ -119,12 +119,14 @@ int countVowels(const std::string& s) {
     // `countVowels` calls
     static const std::regex re("[aeiouAEIOU]");
 
-    return std::count_if(s.begin(), s.end(), [&](char c) {
+    auto n = std::count_if(s.begin(), s.end(), [&](char c) {
         return std::regex_match(
             std::string(1,
                         c),  // need to set a string size, cannot use c directly
             re);
     });
+
+    return static_cast<int>(n);
 }
 
 // std::vector<int> zipSum(const std::vector<int>& a, const std::vector<int>& b);
@@ -151,7 +153,10 @@ std::vector<int> clampValues(std::vector<int> v, int low, int high) {
 // std::pair<int, int> secondMinMax(std::vector<int> v);
 
 int countUppercase(const std::string& s) {
-    return std::count_if(s.begin(), s.end(), [](unsigned char c) {
+    auto n = std::count_if(s.begin(), s.end(), [](unsigned char c) {
         return std::isupper(c); // using a built-in method is wiser than using char literals like 'A' and 'Z'
     });
+
+    // count_if returns a system-specific numeric type. casting to an int ensures the return type will match the function signature
+    return static_cast<int>(n);
 }
