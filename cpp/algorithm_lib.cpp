@@ -87,7 +87,7 @@ bool isSortedAsc(const std::vector<int>& v) {
 }
 
 std::vector<int> iotaSequence(int start, int n) {
-    std::vector<int> v(n);
+    std::vector<int> v(n);  // creates a vector of n zeros so you have a properly-sized vector you can alter item-wise
     std::iota(v.begin(), v.end(), start);
 
     return v;
