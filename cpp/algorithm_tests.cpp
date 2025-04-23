@@ -63,5 +63,53 @@ int main() {
     assert(countVowels("rhythm") == 0);
     assert(countVowels("AEIOUaeiou") == 10);
 
+    // // 1. zipSum
+    // assert((zipSum({1,2,3}, {4,5,6}) == std::vector<int>({5,7,9})));
+    // assert((zipSum({}, {}) == std::vector<int>({})));
+
+    // // 2. clampValues
+    // assert((clampValues({-5,0,5,10,15}, 0, 10)
+    //         == std::vector<int>({0,0,5,10,10})));
+
+    // // 3. firstDuplicateChar
+    // assert(firstDuplicateChar("abcdefaA") == 'a');
+    // assert(firstDuplicateChar("NoDupes!") == '\0');
+
+    // // 4. concatenate
+    // assert(concatenate({"a","b","c"}, ",") == "a,b,c");
+    // assert(concatenate({}, ";") == "");
+
+    // // 5. rotateRight
+    // assert((rotateRight({1,2,3,4}, 1) == std::vector<int>({4,1,2,3})));
+    // assert((rotateRight({1,2,3}, 4) == std::vector<int>({3,1,2})));
+    // assert((rotateRight({}, 5) == std::vector<int>({})));
+
+    // // 6. isPangram
+    // assert(isPangram("The quick brown fox jumps over the lazy dog"));
+    // assert(!isPangram("Sphinx of black quartz, judge my vow".substr(0,10)));
+
+    // // 7. alphabetPositionSum
+    // assert(alphabetPositionSum("abc") == 1+2+3);
+    // assert(alphabetPositionSum("A! Z") == 1 + 0 + 26);
+
+    // // 8. filterLongStrings
+    // assert((filterLongStrings({"tiny","medium","lengthy"}, 5)
+    //          == std::vector<std::string>({"lengthy"})));
+    // assert((filterLongStrings({}, 3) == std::vector<std::string>({})));
+
+    // // 9. secondMinMax
+    // {
+    //   auto p = secondMinMax({5,1,4,2,3});
+    //   assert(p.first == 2 && p.second == 4);
+    // }
+    // {
+    //   auto p = secondMinMax({7,7,7,7});
+    //   assert(p.first == 7 && p.second == 7);
+    // }
+
+    // // 10. countUppercase
+    // assert(countUppercase("Hello World!") == 2);
+    // assert(countUppercase("no caps here") == 0);
+
     return 0;
 }
