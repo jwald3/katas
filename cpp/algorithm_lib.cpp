@@ -53,8 +53,10 @@ int sum(const std::vector<int>& v) {
     return n;
 }
 
-bool containsSubsequence(const std::vector<int>& haystack, const std::vector<int>& needle) {
-    return std::search(haystack.begin(), haystack.end(), needle.begin(), needle.end()) != haystack.end();
+bool containsSubsequence(const std::vector<int>& haystack,
+                         const std::vector<int>& needle) {
+    return std::search(haystack.begin(), haystack.end(), needle.begin(),
+                       needle.end()) != haystack.end();
 }
 
 std::pair<int, int> minMax(const std::vector<int>& v) {
@@ -77,7 +79,8 @@ std::vector<std::string> toUpperCase(const std::vector<std::string>& v) {
 
 std::vector<int> rotateLeft(std::vector<int> v, int n) {
     if (v.empty()) return v;
-    n %= static_cast<int>(v.size());  // crop the number or rotations to be 0 <= n < len(v)
+    n %= static_cast<int>(
+        v.size());  // crop the number or rotations to be 0 <= n < len(v)
     std::rotate(v.begin(), v.begin() + n, v.end());
     return v;
 }
@@ -87,21 +90,22 @@ bool isSortedAsc(const std::vector<int>& v) {
 }
 
 std::vector<int> iotaSequence(int start, int n) {
-    std::vector<int> v(n);  // creates a vector of n zeros so you have a properly-sized vector you can alter item-wise
+    std::vector<int> v(n);  // creates a vector of n zeros so you have a
+                            // properly-sized vector you can alter item-wise
     std::iota(v.begin(), v.end(), start);
 
     return v;
 }
 
-std::pair<std::vector<int>, std::vector<int>> partitionOddsEvens(const std::vector<int>& v) {
+std::pair<std::vector<int>, std::vector<int>> partitionOddsEvens(
+    const std::vector<int>& v) {
     std::vector<int> odds{}, evens{};
 
-    std::partition_copy(v.begin(), v.end(),
-                        std::back_inserter(odds),   // first is the "true" case
-                        std::back_inserter(evens),  // second is what fails to be true
-                    [](int i) { 
-                        return i % 2 != 0; 
-                    });
+    std::partition_copy(
+        v.begin(), v.end(),
+        std::back_inserter(odds),   // first is the "true" case
+        std::back_inserter(evens),  // second is what fails to be true
+        [](int i) { return i % 2 != 0; });
 
     return std::pair<std::vector<int>, std::vector<int>>(odds, evens);
 }
@@ -120,5 +124,23 @@ int countVowels(const std::string& s) {
             std::string(1,
                         c),  // need to set a string size, cannot use c directly
             re);
+    });
+}
+
+// std::vector<int> zipSum(const std::vector<int>& a, const std::vector<int>& b);
+// std::vector<int> clampValues(std::vector<int> v, int low, int high);
+// char firstDuplicateChar(const std::string& s);
+// std::string concatenate(const std::vector<std::string>& v,
+//                         const std::string& sep);
+// std::vector<int> rotateRight(std::vector<int> v, int n);
+// bool isPangram(const std::string& s);
+// int alphabetPositionSum(const std::string& s);
+// std::vector<std::string> filterLongStrings(const std::vector<std::string>& v,
+//                                            std::size_t minLen);
+// std::pair<int, int> secondMinMax(std::vector<int> v);
+
+int countUppercase(const std::string& s) {
+    return std::count_if(s.begin(), s.end(), [](unsigned char c) {
+        return std::isupper(c); // using a built-in method is wiser than using char literals like 'A' and 'Z'
     });
 }

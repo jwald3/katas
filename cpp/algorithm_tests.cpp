@@ -108,8 +108,8 @@ int main() {
     // }
 
     // // 10. countUppercase
-    // assert(countUppercase("Hello World!") == 2);
-    // assert(countUppercase("no caps here") == 0);
+    assert(countUppercase("Hello World!") == 2);
+    assert(countUppercase("no caps here") == 0);
 
     return 0;
 }
