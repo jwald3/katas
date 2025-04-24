@@ -89,8 +89,8 @@ int main() {
     // assert(!isPangram("Sphinx of black quartz, judge my vow".substr(0,10)));
 
     // // 7. alphabetPositionSum
-    // assert(alphabetPositionSum("abc") == 1+2+3);
-    // assert(alphabetPositionSum("A! Z") == 1 + 0 + 26);
+    assert(alphabetPositionSum("abc") == 1+2+3);
+    assert(alphabetPositionSum("A! Z") == 1 + 0 + 26);
 
     // // 8. filterLongStrings
     // assert((filterLongStrings({"tiny","medium","lengthy"}, 5)

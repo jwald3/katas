@@ -25,7 +25,7 @@ std::vector<int> clampValues(std::vector<int> v, int low, int high);
 //                         const std::string& sep);
 // std::vector<int> rotateRight(std::vector<int> v, int n);
 // bool isPangram(const std::string& s);
-// int alphabetPositionSum(const std::string& s);
+int alphabetPositionSum(const std::string& s);
 // std::vector<std::string> filterLongStrings(const std::vector<std::string>& v,
 //                                            std::size_t minLen);
 // std::pair<int, int> secondMinMax(std::vector<int> v);

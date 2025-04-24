@@ -153,7 +153,14 @@ std::vector<int> clampValues(std::vector<int> v, int low, int high) {
 //                         const std::string& sep);
 // std::vector<int> rotateRight(std::vector<int> v, int n);
 // bool isPangram(const std::string& s);
-// int alphabetPositionSum(const std::string& s);
+
+int alphabetPositionSum(const std::string& s) {
+    return std::accumulate(s.begin(), s.end(), 0, [](int acc, char c) {
+        int numVal = std::isalpha(c) ? std::tolower(c) - 'a' + 1 : 0;
+        return acc + numVal;
+    });
+}
+
 // std::vector<std::string> filterLongStrings(const std::vector<std::string>& v,
 //                                            std::size_t minLen);
 // std::pair<int, int> secondMinMax(std::vector<int> v);
