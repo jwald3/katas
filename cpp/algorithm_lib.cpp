@@ -169,8 +169,16 @@ int alphabetPositionSum(const std::string& s) {
     });
 }
 
-// std::vector<std::string> filterLongStrings(const std::vector<std::string>& v,
-//                                            std::size_t minLen);
+std::vector<std::string> filterLongStrings(const std::vector<std::string>& v, std::size_t minLen) {
+    std::vector<std::string> longStrings;
+
+    std::copy_if(v.begin(), v.end(), std::back_inserter(longStrings), [&](std::string s) {
+        return s.size() > minLen;
+    });
+
+    return longStrings;
+}
+
 // std::pair<int, int> secondMinMax(std::vector<int> v);
 
 int countUppercase(const std::string& s) {

@@ -93,9 +93,9 @@ int main() {
     assert(alphabetPositionSum("A! Z") == 1 + 0 + 26);
 
     // // 8. filterLongStrings
-    // assert((filterLongStrings({"tiny","medium","lengthy"}, 5)
-    //          == std::vector<std::string>({"lengthy"})));
-    // assert((filterLongStrings({}, 3) == std::vector<std::string>({})));
+    assert((filterLongStrings({"tiny","medium","lengthy"}, 6)
+             == std::vector<std::string>({"lengthy"})));
+    assert((filterLongStrings({}, 3) == std::vector<std::string>({})));
 
     // // 9. secondMinMax
     // {
