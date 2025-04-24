@@ -151,7 +151,15 @@ std::vector<int> clampValues(std::vector<int> v, int low, int high) {
 // char firstDuplicateChar(const std::string& s);
 // std::string concatenate(const std::vector<std::string>& v,
 //                         const std::string& sep);
-// std::vector<int> rotateRight(std::vector<int> v, int n);
+
+std::vector<int> rotateRight(std::vector<int> v, int n){
+    n %= static_cast<int>(v.size());
+
+    std::rotate(v.begin(), v.begin() - n, v.end());
+
+    return v;
+}
+
 // bool isPangram(const std::string& s);
 
 int alphabetPositionSum(const std::string& s) {

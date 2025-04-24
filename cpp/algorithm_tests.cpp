@@ -80,9 +80,9 @@ int main() {
     // assert(concatenate({}, ";") == "");
 
     // // 5. rotateRight
-    // assert((rotateRight({1,2,3,4}, 1) == std::vector<int>({4,1,2,3})));
-    // assert((rotateRight({1,2,3}, 4) == std::vector<int>({3,1,2})));
-    // assert((rotateRight({}, 5) == std::vector<int>({})));
+    assert((rotateRight({1,2,3,4}, 1) == std::vector<int>({4,1,2,3})));
+    assert((rotateRight({1,2,3}, 4) == std::vector<int>({3,1,2})));
+    assert((rotateRight({}, 5) == std::vector<int>({})));
 
     // // 6. isPangram
     // assert(isPangram("The quick brown fox jumps over the lazy dog"));
