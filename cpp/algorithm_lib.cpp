@@ -129,7 +129,13 @@ int countVowels(const std::string& s) {
     return static_cast<int>(n);
 }
 
-// std::vector<int> zipSum(const std::vector<int>& a, const std::vector<int>& b);
+std::vector<int> zipSum(const std::vector<int>& a, const std::vector<int>& b) {
+    std::vector<int> result (a.size());
+
+    std::transform(a.begin(), a.end(), b.begin(), result.begin(), std::plus<int>());
+
+    return result;
+}
 
 std::vector<int> clampValues(std::vector<int> v, int low, int high) {
     // you have to make sure the destination container is properly sized before writing to it

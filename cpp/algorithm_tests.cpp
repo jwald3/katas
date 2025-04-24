@@ -64,8 +64,8 @@ int main() {
     assert(countVowels("AEIOUaeiou") == 10);
 
     // // 1. zipSum
-    // assert((zipSum({1,2,3}, {4,5,6}) == std::vector<int>({5,7,9})));
-    // assert((zipSum({}, {}) == std::vector<int>({})));
+    assert((zipSum({1,2,3}, {4,5,6}) == std::vector<int>({5,7,9})));
+    assert((zipSum({}, {}) == std::vector<int>({})));
 
     // // 2. clampValues
     assert((clampValues({-5,0,5,10,15}, 0, 10)

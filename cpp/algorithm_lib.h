@@ -18,7 +18,7 @@ std::pair<std::vector<int>, std::vector<int>> partitionOddsEvens(
 bool binarySearch(const std::vector<int>& v, int value);
 int countVowels(const std::string& s);
 
-// std::vector<int> zipSum(const std::vector<int>& a, const std::vector<int>& b);
+std::vector<int> zipSum(const std::vector<int>& a, const std::vector<int>& b);
 std::vector<int> clampValues(std::vector<int> v, int low, int high);
 // char firstDuplicateChar(const std::string& s);
 // std::string concatenate(const std::vector<std::string>& v,
