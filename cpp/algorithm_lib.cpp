@@ -149,8 +149,18 @@ std::vector<int> clampValues(std::vector<int> v, int low, int high) {
 }
 
 // char firstDuplicateChar(const std::string& s);
-// std::string concatenate(const std::vector<std::string>& v,
-//                         const std::string& sep);
+
+std::string concatenate(const std::vector<std::string>& v,  const std::string& sep) {
+    if (v.empty()) {
+        return "";
+    }
+
+    std::string result = std::accumulate(v.begin(), v.end(), std::string(), [&](std::string acc, std::string s) {
+        return acc.empty() ? s : acc + sep + s;
+    });
+
+    return result;
+}
 
 std::vector<int> rotateRight(std::vector<int> v, int n){
     n %= static_cast<int>(v.size());

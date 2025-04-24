@@ -76,8 +76,8 @@ int main() {
     // assert(firstDuplicateChar("NoDupes!") == '\0');
 
     // // 4. concatenate
-    // assert(concatenate({"a","b","c"}, ",") == "a,b,c");
-    // assert(concatenate({}, ";") == "");
+    assert(concatenate({"a","b","c"}, ",") == "a,b,c");
+    assert(concatenate({}, ";") == "");
 
     // // 5. rotateRight
     assert((rotateRight({1,2,3,4}, 1) == std::vector<int>({4,1,2,3})));
