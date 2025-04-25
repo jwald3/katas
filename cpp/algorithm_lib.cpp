@@ -8,6 +8,7 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include <set>
 
 std::string to_lower(const std::string& s) {
     std::string tempString = s;
@@ -171,7 +172,16 @@ std::vector<int> rotateRight(std::vector<int> v, int n){
 }
 
 bool isPangram(const std::string& s) {
-    return true;
+    std::set<char> letters;
+    for (unsigned char c : s) {
+        if (std::isalpha(c)) {
+            letters.insert(static_cast<char>(std::tolower(c)));
+        }
+    }
+
+    // there are only 26 values for isalpha = true, so 
+    // if the set is that size, it means the string has all 26 unique values
+    return letters.size() == 26;    
 }
 
 int alphabetPositionSum(const std::string& s) {
