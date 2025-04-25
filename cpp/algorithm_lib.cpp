@@ -170,7 +170,9 @@ std::vector<int> rotateRight(std::vector<int> v, int n){
     return v;
 }
 
-// bool isPangram(const std::string& s);
+bool isPangram(const std::string& s) {
+    return true;
+}
 
 int alphabetPositionSum(const std::string& s) {
     return std::accumulate(s.begin(), s.end(), 0, [](int acc, char c) {

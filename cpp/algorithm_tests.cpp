@@ -85,8 +85,8 @@ int main() {
     assert((rotateRight({}, 5) == std::vector<int>({})));
 
     // // 6. isPangram
-    // assert(isPangram("The quick brown fox jumps over the lazy dog"));
-    // assert(!isPangram("Sphinx of black quartz, judge my vow".substr(0,10)));
+    assert(isPangram("The quick brown fox jumps over the lazy dog"));
+    assert(!isPangram("Black cats"));
 
     // // 7. alphabetPositionSum
     assert(alphabetPositionSum("abc") == 1+2+3);
