@@ -98,14 +98,14 @@ int main() {
     assert((filterLongStrings({}, 3) == std::vector<std::string>({})));
 
     // // 9. secondMinMax
-    // {
-    //   auto p = secondMinMax({5,1,4,2,3});
-    //   assert(p.first == 2 && p.second == 4);
-    // }
-    // {
-    //   auto p = secondMinMax({7,7,7,7});
-    //   assert(p.first == 7 && p.second == 7);
-    // }
+    {
+      auto p = secondMinMax({5,1,4,2,3});
+      assert(p.first == 2 && p.second == 4);
+    }
+    {
+      auto p = secondMinMax({7,7,7,7});
+      assert(p.first == 7 && p.second == 7);
+    }
 
     // // 10. countUppercase
     assert(countUppercase("Hello World!") == 2);

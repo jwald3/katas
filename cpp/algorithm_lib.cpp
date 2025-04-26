@@ -201,7 +201,13 @@ std::vector<std::string> filterLongStrings(const std::vector<std::string>& v, st
     return longStrings;
 }
 
-// std::pair<int, int> secondMinMax(std::vector<int> v);
+std::pair<int, int> secondMinMax(std::vector<int> v) {
+    std::sort(v.begin(), v.end());
+    std::vector<int> clipped (v.begin() + 1, v.end() - 1);
+
+    auto values = std::minmax_element(clipped.begin(), clipped.end());
+    return std::pair<int, int>(*values.first, *values.second);
+}
 
 int countUppercase(const std::string& s) {
     auto n = std::count_if(s.begin(), s.end(), [](unsigned char c) {
