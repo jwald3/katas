@@ -20,7 +20,7 @@ int countVowels(const std::string& s);
 
 std::vector<int> zipSum(const std::vector<int>& a, const std::vector<int>& b);
 std::vector<int> clampValues(std::vector<int> v, int low, int high);
-// char firstDuplicateChar(const std::string& s);
+char firstDuplicateChar(const std::string& s);
 std::string concatenate(const std::vector<std::string>& v,
                         const std::string& sep);
 std::vector<int> rotateRight(std::vector<int> v, int n);

@@ -149,7 +149,21 @@ std::vector<int> clampValues(std::vector<int> v, int low, int high) {
     return v2;
 }
 
-// char firstDuplicateChar(const std::string& s);
+char firstDuplicateChar(const std::string& s) {
+    std::map<char, int> letters {};
+
+    for (char c: s) {
+        char lowercase = (char) std::tolower(c);
+
+        if (letters.count(lowercase) > 0) {
+            return lowercase;
+        }
+
+        letters.insert({lowercase, 1});
+    }
+
+    return '\0';
+}
 
 std::string concatenate(const std::vector<std::string>& v,  const std::string& sep) {
     if (v.empty()) {

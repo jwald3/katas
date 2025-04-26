@@ -72,8 +72,8 @@ int main() {
             == std::vector<int>({0,0,5,10,10})));
 
     // // 3. firstDuplicateChar
-    // assert(firstDuplicateChar("abcdefaA") == 'a');
-    // assert(firstDuplicateChar("NoDupes!") == '\0');
+    assert(firstDuplicateChar("abcdefaA") == 'a');
+    assert(firstDuplicateChar("NoDupes!") == '\0');
 
     // // 4. concatenate
     assert(concatenate({"a","b","c"}, ",") == "a,b,c");
